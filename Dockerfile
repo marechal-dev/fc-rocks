@@ -1,4 +1,4 @@
-FROM golang:1.20-alpine AS build
+FROM golang:alpine AS build
 
 WORKDIR /usr/app
 
@@ -12,4 +12,4 @@ WORKDIR /usr/app
 
 COPY --from=build /usr/app/bin/main .
 
-CMD ["/main"]
+CMD ["./main"]
